@@ -39,9 +39,9 @@ def get_all_urls_of_deputes
   my_hash = Hash.new
   i = 0
   while i < first_name.size
-    my_hash.store(:first_name)
-    my_hash.store(:last_name)
-    my_hash.store(:email)
+    my_hash.store(:first_name, first_name)
+    my_hash.store(:last_name, last_name)
+    my_hash.store(:email, emails)
     i += 1
   end
   puts my_hash
