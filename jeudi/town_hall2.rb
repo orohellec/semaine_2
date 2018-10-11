@@ -22,15 +22,15 @@ def get_all_the_urls_of_val_doise_townhalls
     urls_tab = []
     url_begin = "http://annuaire-des-mairies.com"
     i = 0
-    while i < tab.size
+    while i < tab.size              #keep the full urls
       other_tab[i] = tab[i].to_s
-      other_tab[i] = other_tab[i][1..other_tab[i].size]  #(other_tab.size - 1)]
+      other_tab[i] = other_tab[i][1..other_tab[i].size - 1]
       urls_tab[i] = url_begin + other_tab[i]
       i += 1
     end
     i = 0
     email_tab = []
-    while i < urls_tab.size
+    while i < urls_tab.size         #get these fucking emails
       email_tab[i] = get_the_email_of_a_townhal_from_its_webpage(urls_tab[i])
       i += 1
     end
